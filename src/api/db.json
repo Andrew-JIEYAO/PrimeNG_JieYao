@@ -1,0 +1,18 @@
+{
+  "patient": [
+    {
+      "id": 1,
+      "name": "Djokovic",
+      "birthday": "2016/04/30 18:05",
+      "bed": "567",
+      "floor": "8"
+    },
+    {
+      "id": 2,
+      "name": "Nadal",
+      "birthday": "2016/04/30 18:05",
+      "bed": "134",
+      "floor": "8"
+    }
+  ]
+}

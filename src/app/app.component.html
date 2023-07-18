@@ -1,4 +1,9 @@
-<div>
-  <app-first-test-demo></app-first-test-demo>
+<div class="card">
+  <p-tabMenu [model]="tabItems"></p-tabMenu>
 </div>
 
+<div class="card">
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
