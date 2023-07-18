@@ -1,0 +1,14 @@
+<form [formGroup]="testDemoForm">
+  <div class="card flex justify-content-center">
+    <label for="name">Name: </label>
+    <input type="text" pInputText formControlName="name" />
+  </div>
+  <div class="card flex justify-content-center">
+    <label for="birthDay">Birthday: </label>
+    <p-calendar formControlName="birthDay"></p-calendar>
+  </div>
+  <div *ngIf="!!player">
+    <p-chip label={{player}}></p-chip>
+  </div>
+</form>
+<p-button label="Click" icon="pi pi-check" iconPos="left" (click)="setValue()"></p-button>
