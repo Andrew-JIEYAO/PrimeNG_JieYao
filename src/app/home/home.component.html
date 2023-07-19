@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="login">
+  <div class="container">
+    <div class="login-img">
+      <p-image src="../assets/images/Logo.png" alt="Image" [preview]="true"></p-image>
+      <h2>歡迎使用醫療系統</h2>
+    </div>
+    <div class="login-txt">
+      <div class="login-inform">
+        <label>帳號</label>
+        <input type="text" placeholder="Account" pInputText />
+      </div>
+      <div class="login-inform">
+        <label>密碼</label>
+        <p-password [feedback]="true" placeholder="Password"></p-password>
+      </div>
+    </div>
+    <span>忘記密碼</span>
+    <button [routerLink]="['/patient']"
+    routerLinkActive="active">登入</button>
+  </div>
+</div>
