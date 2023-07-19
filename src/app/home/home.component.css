@@ -1,75 +1,60 @@
-.login {
-  height: 100%;
+.home {
+  height: 100;
+  width: 100%;
   display: flex;
-  width: 1920px;
-  padding: 164px 650px 164px 649px;
-  justify-content: center;
-  align-items: center;
 }
+
 .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #efefef;
+  gap: 40px;
+}
+
+.aside {
   height: 100%;
+  width: 60px;
   display: flex;
-  padding: 100px 120px;
   flex-direction: column;
+  justify-content: flex-end;
+  background-color: hsla(114, 6%, 68%, 0.812);
+  /* border-style: dashed;
+  border-color: brown; */
+  /* margin-right: 20px; */
+  padding: 10px;
   align-items: center;
-  gap: 32px;
-  border-radius: 40px;
-  background-color: #FFF;
-  box-shadow: 0px 2px 1px 0px rgba(111, 121, 121, 0.25), 0px -1px 1px 1px rgba(111, 121, 121, 0.10);
-}
-.login-img{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.login-img img {
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-}
-.login-img h2 {
-  color: var(--his-sys-light-primary, #006C4F);
-  font-family: Roboto;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-}
-.login-txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-}
-.login-inform {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 20px;
 }
-.login-inform label {
-  color: var(--his-sys-light-on-surface, #191C1A);
-  font-family: Noto Sans TC;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-}
-button {
+
+.main {
+  height: 100%;
+  width: 100%;
   display: flex;
-  height: 40px;
-  padding: 0px 24px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  border-radius: 20px;
-  background: var(--his-sys-light-primary, #006C4F);
-  color: var(--his-sys-light-on-primary, #FFF);
-  text-align: center;
-  font-family: Noto Sans TC;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
+  flex-direction: column;
+  background-color: #efefef;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.news {
+  background-color: burlywood;
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--his-sys-light-surface-container-lowest, #FFF);
+  box-shadow: 0px 2px 1px 0px rgba(111, 121, 121, 0.25), 0px -1px 1px 1px rgba(111, 121, 121, 0.10);
+}
+
+.fav {
+  background-color: rgb(171, 135, 222);
+  padding: 24px;
+  gap: 24px;
+  border-radius: 12px;
+}
+
+.all {
+  background-color: rgb(135, 222, 141);
+  padding: 24px;
+  gap: 24px;
+  border-radius: 12px;
 }

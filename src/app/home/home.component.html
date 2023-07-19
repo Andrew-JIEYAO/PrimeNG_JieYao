@@ -1,21 +1,38 @@
-<div class="login">
+<div class="home">
   <div class="container">
-    <div class="login-img">
-      <p-image src="../assets/images/Logo.png" alt="Image" [preview]="true"></p-image>
-      <h2>歡迎使用醫療系統</h2>
+    <div class="aside">
+      <p-image src="../assets/images/Logo.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/Home.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/humanHead.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/Vector.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/Apps.png" alt="Image" width="24px" height="24px" [routerLink]="['/patient']" routerLinkActive="active"></p-image>
+      <p-image src="../assets/images/Logout.png" alt="Image" width="24px" height="24px" [routerLink]="['/login']"
+        routerLinkActive="active"></p-image>
     </div>
-    <div class="login-txt">
-      <div class="login-inform">
-        <label>帳號</label>
-        <input type="text" placeholder="Account" pInputText />
+    <div class="main">
+      <div class="news">
+        <h3>最新消息</h3>
+        <p-table [value]="newses" [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="body" let-news>
+            <tr>
+              <td>{{ news.date }}</td>
+              <td>{{ news.title }}</td>
+              <td>
+                <a [routerLink]="['/patient']" routerLinkActive="active">
+                  請點選進入
+                </a>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
       </div>
-      <div class="login-inform">
-        <label>密碼</label>
-        <p-password [feedback]="true" placeholder="Password"></p-password>
+      <div class="fav">
+        <h1>fav</h1>
       </div>
+      <div class="all">
+        <h1>all</h1>
+      </div>
+
     </div>
-    <span>忘記密碼</span>
-    <button [routerLink]="['/patient']"
-    routerLinkActive="active">登入</button>
   </div>
 </div>
