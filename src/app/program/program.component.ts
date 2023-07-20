@@ -1,8 +1,8 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardModule } from 'primeng/card';
-import { ProgramService } from '../dashboard/program.service';
 import { MenuItem } from '../interface/menu';
+import { ProgramService } from '../dashboard/program.service';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-program',

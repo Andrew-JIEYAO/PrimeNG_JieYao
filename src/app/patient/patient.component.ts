@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TagModule } from 'primeng/tag';
-import { SidebarModule } from 'primeng/sidebar';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { SidebarModule } from 'primeng/sidebar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ButtonModule } from 'primeng/button';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-patient',
   standalone: true,
-  imports: [CommonModule, TagModule, RouterLinkActive, RouterLink, RouterOutlet, PanelMenuModule, SidebarModule, ButtonModule],
+  imports: [CommonModule, RouterLinkActive, RouterLink, RouterOutlet, PanelMenuModule, SidebarModule, ButtonModule],
   templateUrl: './patient.component.html',
   styleUrls: ['./patient.component.css']
 })

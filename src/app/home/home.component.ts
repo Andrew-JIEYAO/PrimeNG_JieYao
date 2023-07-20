@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ImageModule } from 'primeng/image';
 import { RouterModule } from '@angular/router';
-import { DashboardComponent } from "../dashboard/dashboard.component";
-import { ButtonModule } from 'primeng/button';
 import { MenuItem } from '../interface/menu';
+import { DashboardComponent } from "../dashboard/dashboard.component";
+import { ImageModule } from 'primeng/image';
+import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 @Component({
   selector: 'app-home',

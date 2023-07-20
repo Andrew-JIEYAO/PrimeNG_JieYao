@@ -17,14 +17,12 @@
 }
 
 .fav {
-  /* background-color: rgb(171, 135, 222); */
   padding: 24px;
   gap: 24px;
   border-radius: 12px;
 }
 
 .all {
-  /* background-color: rgb(135, 222, 141); */
   padding: 24px;
   gap: 24px;
   border-radius: 12px;

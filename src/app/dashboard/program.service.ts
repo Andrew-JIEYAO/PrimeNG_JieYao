@@ -28,6 +28,20 @@ export class ProgramService {
         icon: 'pi pi-book',
         routerLink: '',
         version: 'V 1.5.5'
+      },
+      {
+        label: '成人護理臨床作業系統',
+        icon: 'pi pi-cart-plus',
+        command: () => {
+          console.log('成人護理臨床作業系統');
+        },
+        version: 'V 2.1.0'
+      },
+      {
+        label: '病歷首頁',
+        icon: 'pi pi-id-card',
+        routerLink: '',
+        version: 'V 3.5.5'
       }
     ]
   }
@@ -37,6 +51,6 @@ export class ProgramService {
   }
 
   getFavPrograms() {
-    return Promise.resolve(this.#getPrograms().slice(0,2));
+    return Promise.resolve(this.#getPrograms().slice(1,3));
   }
 }
