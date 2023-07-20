@@ -5,14 +5,9 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: 'patient',
-    loadComponent: () =>
-      import('./patient/patient.component').then(c => c.PatientComponent)
-  },
-  {
     path: 'home',
-    loadComponent: () =>
-      import('./home/home.component').then(c => c.HomeComponent)
+    loadComponent: () => import('./home/home.component').then(c => c.HomeComponent),
+    loadChildren: () => import('./home.routes').then((r) => r.routes)
   },
   { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

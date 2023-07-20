@@ -36,7 +36,7 @@ export class NewsService {
     ]
   }
 
-  getProducts() {
+  getNewses() {
     return Promise.resolve(this.#getNews());
 }
 }

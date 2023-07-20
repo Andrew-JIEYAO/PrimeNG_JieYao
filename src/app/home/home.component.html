@@ -2,37 +2,23 @@
   <div class="container">
     <div class="aside">
       <p-image src="../assets/images/Logo.png" alt="Image" width="24px" height="24px"></p-image>
-      <p-image src="../assets/images/Home.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/Home.png" alt="Image" width="24px" height="24px"
+        [routerLink]="['/home']"
+        routerLinkActive="active">
+      </p-image>
       <p-image src="../assets/images/humanHead.png" alt="Image" width="24px" height="24px"></p-image>
       <p-image src="../assets/images/Vector.png" alt="Image" width="24px" height="24px"></p-image>
-      <p-image src="../assets/images/Apps.png" alt="Image" width="24px" height="24px" [routerLink]="['/patient']" routerLinkActive="active"></p-image>
-      <p-image src="../assets/images/Logout.png" alt="Image" width="24px" height="24px" [routerLink]="['/login']"
-        routerLinkActive="active"></p-image>
+      <p-menu #menu [model]="programItems" [popup]="true"></p-menu>
+      <p-button type="button" (click)="menu.toggle($event)" [styleClass]="'menu-button'">
+        <img src="../assets/images/Apps.png">
+      </p-button>
+      <p-image src="../assets/images/Logout.png" alt="Image" width="24px" height="24px"
+        [routerLink]="['/login']"
+        routerLinkActive="active">
+      </p-image>
     </div>
     <div class="main">
-      <div class="news">
-        <h3>最新消息</h3>
-        <p-table [value]="newses" [tableStyle]="{ 'min-width': '50rem' }">
-          <ng-template pTemplate="body" let-news>
-            <tr>
-              <td>{{ news.date }}</td>
-              <td>{{ news.title }}</td>
-              <td>
-                <a [routerLink]="['/patient']" routerLinkActive="active">
-                  請點選進入
-                </a>
-              </td>
-            </tr>
-          </ng-template>
-        </p-table>
-      </div>
-      <div class="fav">
-        <h1>fav</h1>
-      </div>
-      <div class="all">
-        <h1>all</h1>
-      </div>
-
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

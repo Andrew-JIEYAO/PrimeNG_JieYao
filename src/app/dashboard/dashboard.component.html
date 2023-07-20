@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="news">
+    <h3>最新消息</h3>
+    <p-table [value]="newses" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="body" let-news>
+        <tr>
+          <td>{{ news.date }}</td>
+          <td>{{ news.title }}</td>
+          <td>
+            <a [routerLink]="['/home/patient']" routerLinkActive="active">
+              請點選進入
+            </a>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="fav">
+    <h3>我的最愛</h3>
+    <div class="fav-container">
+      <p-card [styleClass]="'card-container'">
+        <span class="pi pi-user-edit"></span>
+        <p>test</p>
+      </p-card>
+      <p-card [styleClass]="'card-container'">
+        <span class="pi pi-user-edit"></span>
+      </p-card>
+
+    </div>
+
+  </div>
+  <!-- <div class="all">
+    <h1>all</h1>
+  </div> -->
+</div>

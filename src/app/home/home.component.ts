@@ -1,30 +1,46 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageModule } from 'primeng/image';
-import { InputTextModule } from 'primeng/inputtext';
-import { PasswordModule } from 'primeng/password';
-import { ButtonModule } from 'primeng/button';
 import { RouterModule } from '@angular/router';
-import { NewsService } from './news.service';
-import { News } from '../interface/news';
-import { TableModule } from 'primeng/table';
-
+import { DashboardComponent } from "../dashboard/dashboard.component";
+import { ButtonModule } from 'primeng/button';
+import { MenuItem } from '../interface/menu';
+import { MenuModule } from 'primeng/menu';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ImageModule, InputTextModule, PasswordModule, ButtonModule, RouterModule, TableModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  imports: [CommonModule, ImageModule, RouterModule, DashboardComponent, ButtonModule, MenuModule]
 })
 export class HomeComponent {
   title = 'Home';
-  newses!: News[];
-
-  public newsService = inject(NewsService);
+  programItems?: MenuItem[];
 
   ngOnInit(): void {
-    this.newsService.getProducts().then((datas) => {
-      this.newses = datas;
-    })
+    this.programItems = [
+      {
+        label: 'Options',
+        items: [
+          {
+            label: '門診醫囑',
+            icon: 'pi-user-plus',
+            routerLink: '/home/patient'
+          },
+          {
+            label: '心髒移植表單',
+            icon: 'pi-heart-fill',
+            command: () => {
+              console.log('heartFill');
+            }
+          },
+          {
+            label: '電子病歷查詢',
+            icon: 'pi-book',
+            routerLink: ''
+          }
+        ]
+      }
+    ]
   }
 }
