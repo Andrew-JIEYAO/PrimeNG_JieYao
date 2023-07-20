@@ -3,8 +3,9 @@ export interface MenuItem {
   icon?: string;
   command?(event: MenuItemCommandEvent): void;
   items?: MenuItem[];
-  name?: string;
+  // name?: string;
   routerLink?: string;
+  version?: string;
 }
 export interface MenuItemCommandEvent {
   /**

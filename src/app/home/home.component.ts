@@ -24,19 +24,19 @@ export class HomeComponent {
         items: [
           {
             label: '門診醫囑',
-            icon: 'pi-user-plus',
+            icon: 'pi pi-user-plus',
             routerLink: '/home/patient'
           },
           {
             label: '心髒移植表單',
-            icon: 'pi-heart-fill',
+            icon: 'pi pi-heart-fill',
             command: () => {
               console.log('heartFill');
             }
           },
           {
             label: '電子病歷查詢',
-            icon: 'pi-book',
+            icon: 'pi pi-book',
             routerLink: ''
           }
         ]

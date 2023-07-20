@@ -1,0 +1,16 @@
+<div class="fav-container">
+  <p-card [styleClass]="'card-container'" *ngFor="let program of programs">
+    <div class="card-top">
+      <span class="{{program.icon}}"
+        style="font-size: 3rem;background-color: #006C4F;color: aliceblue;border-radius: 5px;"></span>
+      <div class="card-top-right">
+        <img src="../assets/images/Star.png">
+        <p>{{program.version}}</p>
+      </div>
+    </div>
+    <div class="card-botton">
+      <label>{{program.label}}</label>
+      <img src="../assets/images/ArrowRight.png">
+    </div>
+  </p-card>
+</div>

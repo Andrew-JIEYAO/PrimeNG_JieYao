@@ -5,17 +5,18 @@ import { NewsService } from './news.service';
 import { TableModule } from 'primeng/table';
 import { RouterModule } from '@angular/router';
 import { CardModule } from 'primeng/card';
+import { ProgramComponent } from "../program/program.component";
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule, TableModule, RouterModule, CardModule],
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.css'],
+    imports: [CommonModule, TableModule, RouterModule, CardModule, ProgramComponent]
 })
 export class DashboardComponent {
   newses!: News[];
-  public newsService = inject(NewsService);
+  newsService = inject(NewsService);
 
   ngOnInit(): void {
     this.newsService.getNewses().then((datas) => {

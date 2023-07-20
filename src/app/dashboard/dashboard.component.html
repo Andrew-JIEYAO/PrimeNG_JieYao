@@ -17,24 +17,10 @@
   </div>
   <div class="fav">
     <h3>我的最愛</h3>
-    <div class="fav-container">
-      <p-card [styleClass]="'card-container'">
-        <div class="card-top">
-          <span class="pi pi-user-edit" style="font-size: 3rem;background-color: #006C4F;color: aliceblue;border-radius: 5px;"></span>
-          <div class="card-top-right">
-            <img src="../assets/images/Star.png">
-            <p>V1.1.0</p>
-          </div>
-        </div>
-        <div class="card-botton">
-          <label>門診醫囑系統</label>
-          <img src="../assets/images/ArrowRight.png">
-        </div>
-      </p-card>
-    </div>
-
+    <app-program [isFav]=true></app-program>
   </div>
-  <!-- <div class="all">
-    <h1>all</h1>
-  </div> -->
+  <div class="all">
+    <h3>程式集</h3>
+    <app-program></app-program>
+  </div>
 </div>
