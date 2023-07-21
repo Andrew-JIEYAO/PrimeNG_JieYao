@@ -1,0 +1,48 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #efefef;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  row-gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+::ng-deep .back-button{
+  display: flex;
+  height: 40px;
+  padding: 0px 24px;
+  align-items: center;
+  border-radius: 20px;
+  border-style: hidden;
+  background: var(--his-sys-light-secondary-container, #CFE9DA);
+  color: var(--his-sys-light-on-surface, #191C1A);
+}
+
+.head h3 {
+  color: var(--his-sys-light-on-surface, #191C1A);
+  /* HIS/headline/medium */
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  /* 128.571% */
+}
+
+/* .undone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+} */

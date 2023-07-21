@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="head">
+    <p-button label="返回" [styleClass]="'back-button'" [routerLink]="['/home']"></p-button>
+    <h3>最新消息</h3>
+    <div style="width: 60%;"></div>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText placeholder="查詢"/>
+    </span>
+  </div>
+  <div class="undone">
+    <p-tag value="未完成" [style]="{ 'background': '#FFDCC0', 'font-size': '1.2rem', 'color' : '#2E1600'}"></p-tag>
+    <app-news [isDone]=true></app-news>
+  </div>
+  <div class="nomal">
+    <p-tag value="一般消息" [style]="{ 'background': '#404944', 'font-size': '1.2rem', 'color' : '#DBE5DE'}"></p-tag>
+    <app-news [isDone]=true></app-news>
+  </div>
+  <div class="done">
+    <p-tag value="已完成" [style]="{ 'background': '#99CFC1', 'font-size': '1.2rem', 'color' : '#00523C'}"></p-tag>
+    <app-news [isDone]=false></app-news>
+  </div>
+</div>

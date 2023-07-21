@@ -1,4 +1,4 @@
-<p-table [value]="newses" [tableStyle]="{ 'min-width': '50rem' }">
+<p-table [value]="newses" [scrollable]="true" scrollHeight="250px" [tableStyle]="{ 'min-width': '50rem' }">
   <ng-template pTemplate="body" let-news>
     <tr>
       <td>{{ news.date }}</td>

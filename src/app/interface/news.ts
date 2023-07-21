@@ -3,4 +3,5 @@ export interface News {
   href:string;
   title:string;
   date:string;
+  isDone?:boolean;
 }

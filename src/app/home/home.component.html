@@ -2,23 +2,23 @@
   <div class="container">
     <div class="aside">
       <p-image src="../assets/images/Logo.png" alt="Image" width="24px" height="24px"></p-image>
-      <p-image src="../assets/images/Home.png" alt="Image" width="24px" height="24px"
-        [routerLink]="['/home']"
+      <p-image src="../assets/images/Home.png" alt="Image" width="24px" height="24px" [routerLink]="['/home']"
         routerLinkActive="active">
       </p-image>
       <p-image src="../assets/images/humanHead.png" alt="Image" width="24px" height="24px"></p-image>
-      <p-image src="../assets/images/Vector.png" alt="Image" width="24px" height="24px"></p-image>
+      <p-image src="../assets/images/Vector.png" alt="Image" width="24px" height="24px" [routerLink]="['/home/news']"
+        routerLinkActive="active">
+      </p-image>
       <p-menu #menu [model]="programItems" [popup]="true"></p-menu>
       <p-button type="button" (click)="menu.toggle($event)" [styleClass]="'menu-button'">
         <img src="../assets/images/Apps.png">
       </p-button>
-      <p-image src="../assets/images/Logout.png" alt="Image" width="24px" height="24px"
-        [routerLink]="['/login']"
+      <p-image src="../assets/images/Logout.png" alt="Image" width="24px" height="24px" [routerLink]="['/login']"
         routerLinkActive="active">
       </p-image>
     </div>
-    <div class="main">
-      <router-outlet></router-outlet>
-    </div>
+  </div>
+  <div class="article">
+    <router-outlet></router-outlet>
   </div>
 </div>
